@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservations | Recipe Secrets</title>
+  <meta name="description" content="Book a table at Recipe Secrets in Rivermill, OR. Choose your date, time, and party size for parties of 1 to 12." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">Recipe Secrets <span>Rivermill</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="reservations.html" aria-current="page">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <img
+        class="hero-bg"
+        src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1800&q=80"
+        alt="Elegant table set for a reservation with candlelight"
+        loading="eager"
+      />
+      <div class="page-hero-content">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Reservations</p>
+        <h1>Reserve a Table</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="form-card">
+          <!--
+            Reservation form.
+            To connect a real backend (e.g. Formspree), see the commented-out
+            fetch() call inside initReservationForm() in js/main.js, and add
+            an action/method here if you prefer a plain HTML form POST instead.
+          -->
+          <form id="reservation-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field full">
+                <label for="res-name">Full name</label>
+                <input type="text" id="res-name" name="name" autocomplete="name" required />
+                <span class="field-error" id="res-name-error"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="res-email">Email</label>
+                <input type="email" id="res-email" name="email" autocomplete="email" required />
+                <span class="field-error" id="res-email-error"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="res-phone">Phone</label>
+                <input type="tel" id="res-phone" name="phone" autocomplete="tel" required />
+                <span class="field-error" id="res-phone-error"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="res-date">Date</label>
+                <input type="date" id="res-date" name="date" required />
+                <span class="field-error" id="res-date-error"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="res-time">Time</label>
+                <select id="res-time" name="time" required>
+                  <option value="">Select a time</option>
+                  <option>11:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>1:00 PM</option>
+                  <option>5:00 PM</option>
+                  <option>6:00 PM</option>
+                  <option>7:00 PM</option>
+                  <option>8:00 PM</option>
+                  <option>9:00 PM</option>
+                </select>
+                <span class="field-error" id="res-time-error"></span>
+              </div>
+
+              <div class="form-field full">
+                <label for="res-guests">Party size</label>
+                <input type="number" id="res-guests" name="guests" min="1" max="12" value="2" required />
+                <span class="field-error" id="res-guests-error"></span>
+              </div>
+
+              <div class="form-field full">
+                <label for="res-notes">Special requests (optional)</label>
+                <textarea id="res-notes" name="notes" placeholder="Allergies, special occasions, seating preferences..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Request Reservation</button>
+            <p class="form-note">We'll confirm your reservation by email or phone within 24 hours. For parties larger than 12, please call us at (503) 555-0142.</p>
+          </form>
+
+          <div id="reservation-confirmation" class="confirmation" role="status">
+            <div class="icon" aria-hidden="true">🎉</div>
+            <h2>Thank you, <span data-confirm-name></span>!</h2>
+            <p>Your reservation request has been received. We'll be in touch shortly to confirm your table at Recipe Secrets.</p>
+            <a class="btn btn-secondary" href="index.html">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Recipe Secrets</div>
+          <p>482 Harvest Lane<br />Rivermill, OR 97301</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Recipe Secrets on Instagram">IG</a>
+            <a href="#" aria-label="Recipe Secrets on Facebook">FB</a>
+            <a href="#" aria-label="Recipe Secrets on Yelp">Y</a>
+          </div>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>Tue – Sun: 11am – 10pm<br />Closed Monday</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+15035550142">(503) 555-0142</a></li>
+            <li><a href="mailto:hello@recipesecrets.example">hello@recipesecrets.example</a></li>
+            <li><a href="contact.html">Get Directions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Recipe Secrets. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

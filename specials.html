@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Specials & Menu | Recipe Secrets</title>
+  <meta name="description" content="Browse Recipe Secrets' chef-crafted specials — handmade pastas, wood-fired pizzas, and comfort food classics in Rivermill, OR." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">Recipe Secrets <span>Rivermill</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="specials.html" aria-current="page">Specials</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <img
+        class="hero-bg"
+        src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1800&q=80"
+        alt="Spread of Italian dishes including pasta, pizza, and salad"
+        loading="eager"
+      />
+      <div class="page-hero-content">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Specials</p>
+        <h1>Tonight's Specials</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Change prices, dish names, photos, and tags directly in each .dish-card below. -->
+        <div class="filters">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pasta">Pasta</button>
+          <button class="filter-btn" data-filter="pizza">Pizza</button>
+          <button class="filter-btn" data-filter="mains">Mains</button>
+          <button class="filter-btn" data-filter="starters">Starters</button>
+        </div>
+
+        <div class="card-grid">
+          <article class="dish-card fade-in" data-category="pasta">
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80" alt="Handmade tagliatelle pasta with slow-braised short rib ragu" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Nonna's Short Rib Ragu</h3><span class="price">$26</span></div>
+              <p class="dish-desc">Hand-cut tagliatelle tossed in a six-hour short rib ragu with shaved pecorino.</p>
+              <div class="tags"><span class="tag tag--chef">Chef's Pick</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="pizza">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Wood-fired margherita pizza with fresh basil" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Wood-Fired Margherita</h3><span class="price">$18</span></div>
+              <p class="dish-desc">San Marzano tomatoes, fresh mozzarella, and basil from our rooftop garden.</p>
+              <div class="tags"><span class="tag tag--veg">Vegetarian</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="pizza">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Spicy arrabbiata pizza with chili flakes" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Diavola Arrabbiata</h3><span class="price">$20</span></div>
+              <p class="dish-desc">Spicy soppressata, calabrian chili, and fresh mozzarella on a blistered crust.</p>
+              <div class="tags"><span class="tag tag--spicy">Spicy</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="mains">
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80" alt="Char-grilled steak with roasted vegetables" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Harvest Lane Ribeye</h3><span class="price">$38</span></div>
+              <p class="dish-desc">12oz grass-fed ribeye, rosemary butter, and roasted seasonal vegetables.</p>
+              <div class="tags"><span class="tag tag--gf">Gluten-Free</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="mains">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80" alt="Pan-seared salmon over creamy risotto" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Pan-Seared Salmon Risotto</h3><span class="price">$29</span></div>
+              <p class="dish-desc">Crisp-skin salmon over saffron risotto with lemon-caper butter.</p>
+              <div class="tags"><span class="tag tag--gf">Gluten-Free</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="pasta">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Creamy mushroom and truffle pasta" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Wild Mushroom Tagliolini</h3><span class="price">$24</span></div>
+              <p class="dish-desc">Wild mushrooms, truffle cream, and toasted pine nuts over fresh tagliolini.</p>
+              <div class="tags"><span class="tag tag--veg">Vegetarian</span><span class="tag tag--chef">Chef's Pick</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="starters">
+            <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=800&q=80" alt="Burrata starter with heirloom tomatoes and basil oil" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Burrata & Heirloom Tomato</h3><span class="price">$15</span></div>
+              <p class="dish-desc">Creamy burrata, heirloom tomatoes, basil oil, and grilled sourdough.</p>
+              <div class="tags"><span class="tag tag--veg">Vegetarian</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="starters">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Crispy arancini rice balls with marinara dipping sauce" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Crispy Arancini</h3><span class="price">$12</span></div>
+              <p class="dish-desc">Saffron risotto balls, fried golden, served with san marzano marinara.</p>
+              <div class="tags"><span class="tag tag--veg">Vegetarian</span></div>
+            </div>
+          </article>
+
+          <article class="dish-card fade-in" data-category="mains">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" alt="Braised chicken thighs with herb jus" loading="lazy" />
+            <div class="dish-card-body">
+              <div class="dish-card-top"><h3>Rosemary Braised Chicken</h3><span class="price">$25</span></div>
+              <p class="dish-desc">Slow-braised chicken thighs, garlic mash, and a rosemary-herb jus.</p>
+              <div class="tags"><span class="tag tag--gf">Gluten-Free</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Recipe Secrets</div>
+          <p>482 Harvest Lane<br />Rivermill, OR 97301</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Recipe Secrets on Instagram">IG</a>
+            <a href="#" aria-label="Recipe Secrets on Facebook">FB</a>
+            <a href="#" aria-label="Recipe Secrets on Yelp">Y</a>
+          </div>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>Tue – Sun: 11am – 10pm<br />Closed Monday</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+15035550142">(503) 555-0142</a></li>
+            <li><a href="mailto:hello@recipesecrets.example">hello@recipesecrets.example</a></li>
+            <li><a href="contact.html">Get Directions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Recipe Secrets. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
