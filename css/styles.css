@@ -245,7 +245,7 @@ a {
 }
 
 .nav-links a[aria-current="page"] {
-  background: var(--burgundy);
+  background: hotpink;
   color: var(--white);
 }
 
